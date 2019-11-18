@@ -1,5 +1,6 @@
 package me.xueyao.strategy;
 
+import me.xueyao.strategy.enums.StrategyEnums;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,13 +21,21 @@ public class StrategyTest {
 
     @Test
     public void testGive() {
-        BigDecimal calculate = strategyMap.get("give").calculate(new BigDecimal("100" ));
+        //第一种方式
+        //BigDecimal calculate = strategyMap.get("give").calculate(new BigDecimal("100" ));
+
+        //第二种方式
+        BigDecimal calculate = strategyMap.get(StrategyEnums.enumName(StrategyEnums.GIVE)).calculate(new BigDecimal("100" ));
         System.out.println(calculate);
     }
 
     @Test
     public void testSale() {
-        BigDecimal calculate = strategyMap.get("sale").calculate(new BigDecimal("180" ));
+        //第一种方式
+        //BigDecimal calculate = strategyMap.get("saleImpl").calculate(new BigDecimal("180" ));
+
+        //第二种方式
+        BigDecimal calculate = strategyMap.get(StrategyEnums.enumName(StrategyEnums.SALE)).calculate(new BigDecimal("180" ));
         System.out.println(calculate);
     }
 }
