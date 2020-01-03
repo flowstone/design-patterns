@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>me.xueyao</groupId>
-    <artifactId>design-patterns</artifactId>
+    <artifactId>simon-design-patterns</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>design-patterns</name>
+    <name>simon-design-patterns</name>
     <description>设计模式</description>
 
     <properties>
